@@ -1,0 +1,42 @@
+<div class="container">
+  <h2>Login page using td form.</h2>
+  <form #userRef="ngForm" (ngSubmit)="checkLogin(userRef.value)" novalidate>
+    <label>UserName</label>
+    <input
+      type="text"
+      name="Username"
+      ngModel
+      required
+      #inputRef="ngModel"
+      minlength="2"
+    />
+    <div *ngIf="inputRef.errors && (inputRef.dirty || inputRef.touched)">
+      <span [hidden]="!inputRef.errors.required">UserName is required.</span>
+      <span [hidden]="!inputRef.errors.minlength"
+        >UserName has to be atleast 2 characters.</span
+      >
+    </div>
+    <br />
+    <label>PassWord</label>
+    <input
+      type="password"
+      name="Password"
+      ngModel
+      required
+      #passRef="ngModel"
+      pattern="\d{3}@\D{2}"
+    />
+    <div *ngIf="passRef.errors && (passRef.dirty || passRef.touched)">
+      <span [hidden]="!passRef.errors.required"> Password is required. </span>
+      <span [hidden]="!passRef.errors.pattern">
+        It must follow the pattern. 123@AB
+      </span>
+    </div>
+    <br />
+    <input type="submit" value="submit" [disabled]="!userRef.valid" />
+  </form>
+  <hr />
+  <p>
+    {{ msg }}
+  </p>
+</div>
