@@ -7,6 +7,9 @@ import { TemplaterefComponent } from './templateref/templateref.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { FakeComponent } from './fake/fake.component';
+import { FakeService2 } from './fake.service2';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,9 +17,16 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     TemplaterefComponent,
     TemplateDrivenFormComponent,
     ReactiveFormComponent,
+    FakeComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
+  providers: [FakeService2],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -8,12 +8,12 @@
       ngModel
       required
       #inputRef="ngModel"
-      minlength="2"
+      minlength="3"
     />
     <div *ngIf="inputRef.errors && (inputRef.dirty || inputRef.touched)">
       <span [hidden]="!inputRef.errors.required">UserName is required.</span>
       <span [hidden]="!inputRef.errors.minlength"
-        >UserName has to be atleast 2 characters.</span
+        >UserName has to be atleast 3 characters.</span
       >
     </div>
     <br />
