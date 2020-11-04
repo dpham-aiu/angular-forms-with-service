@@ -3,4 +3,19 @@
   <br />
   {{ msg1 }}
   <input type="button" value="Call function" (click)="fun1()" />
+
+  <table border="1">
+    <tr>
+      <th>userId</th>
+      <th>id</th>
+      <th>Title</th>
+      <th>Completed</th>
+    </tr>
+    <tr *ngFor="let obj of fakeObject">
+      <td>{{ obj.userId }}</td>
+      <td>{{ obj.id }}</td>
+      <td>{{ obj.title }}</td>
+      <td>{{ obj.completed }}</td>
+    </tr>
+  </table>
 </div>
