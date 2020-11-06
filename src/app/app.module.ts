@@ -10,6 +10,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { FakeComponent } from './fake/fake.component';
 import { FakeService2 } from './fake.service2';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductComponent } from './product/product.component';
+import { ProductService } from './product.service';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     TemplateDrivenFormComponent,
     ReactiveFormComponent,
     FakeComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,

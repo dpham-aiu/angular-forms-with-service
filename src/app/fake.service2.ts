@@ -10,6 +10,7 @@ export class FakeService2 {
   }
 }
 
+//this.http.get(next(), error(), completed())
 //Model Class -- this class helps to map json data form rest API
 export class Fake {
   constructor(

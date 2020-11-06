@@ -1,0 +1,17 @@
+<div class="container">
+  <input type="button" (click)="loadProduct()" [value]="msg" />
+  <div *ngIf="flag">
+    <table border="1">
+      <thead>
+        <th>id</th>
+        <th>name</th>
+      </thead>
+      <tr *ngFor="let item of productInfo">
+        <td>
+          {{ item.id }}
+        </td>
+        <td>{{ item.name }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
